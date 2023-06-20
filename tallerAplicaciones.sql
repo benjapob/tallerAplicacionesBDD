@@ -47,7 +47,7 @@ create table trabajador(
     idTrabajador int not null auto_increment,
     nombreTrabajador varchar(50),
     apellidoTrabajador varchar(50),
-    rutTrabajador varchar(10) not null,
+    rutTrabajador varchar(10) not null unique,
     correo varchar(100) not null,
     contraseña varchar(100) not null,
     idRol int not null,
@@ -106,6 +106,6 @@ INSERT INTO `categoria` VALUES (null,'LIBRO');
 INSERT INTO `categoria` VALUES (null,'REVISTA');
 INSERT INTO `categoria` VALUES (null,'ENCICLOPEDIA');
 
-insert into trabajador values (null, 'BENJAMIN', 'POBLETE', '11111111-1', 'CORREO@CORREO.COM', '81DC9BDB52D04DC20036DBD8313ED055', 1);
-insert into trabajador values (null, 'JUAN', 'SOTO', '11111111-2', 'CORREO2@CORREO.COM', '81DC9BDB52D04DC20036DBD8313ED055', 2);
-insert into trabajador values (null, 'JOSE', 'SOTO', '11111111-3', 'CORREO3@CORREO.COM', '81DC9BDB52D04DC20036DBD8313ED055', 3);
+insert into trabajador values (null, 'BENJAMIN', 'POBLETE', '1-1', 'CORREO@CORREO.COM', '81DC9BDB52D04DC20036DBD8313ED055', 1);
+insert into trabajador values (null, 'JUAN', 'SOTO', '1-2', 'CORREO2@CORREO.COM', '81DC9BDB52D04DC20036DBD8313ED055', 2);
+insert into trabajador values (null, 'JOSE', 'SOTO', '1-3', 'CORREO3@CORREO.COM', '81DC9BDB52D04DC20036DBD8313ED055', 3);
